@@ -1,0 +1,104 @@
+.Virtual{
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-self: center;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+.left>:nth-child(1){
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+}
+.left>:nth-child(2){
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    display: block;
+    width: 20rem;
+}
+.left>:nth-child(3){
+    font-size: 1.2rem;
+    border: 2px solid #fff;
+    width: max-content;
+    padding: 4px 10px;
+    border-radius: 25px;
+}
+.middle{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.6s ease-in;
+}
+.middle>:first-child{
+    height: 10rem;
+    width: 10rem;
+    background: rgb(177, 41, 231);
+    border-radius: 50%;
+    transition: all 0.6s ease-in;
+}
+.middle>:nth-child(2){
+    height: 8rem;
+    width: 8rem;
+    background: rgb(208, 238, 232);
+    border-radius: 50%;
+    margin-left: -6rem;
+}
+.middle>:nth-child(3){
+    height: 6rem;
+    width: 6rem;
+    background: rgb(88, 205, 145);
+    border-radius: 50%;
+    margin-left: -5rem;
+}
+.middle>:nth-child(4){
+    height: 4rem;
+    width: 4rem;
+    background: rgb(168, 88, 205);
+    border-radius: 50%;
+    margin-left: -3rem;
+}
+
+.wrapper{
+    width: 22rem;
+    height: 10rem;
+    background: #fff;
+}
+.wrapper>:first-child{
+    border-radius:25px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 648px) {
+    .wrapper{
+        width: 20rem;
+        background: #fff;
+        margin-bottom: -4rem;
+    }
+    .wrapper>:first-child{
+        border-radius:25px;
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    .Virtual{
+        padding: 2rem;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* margin-bottom: 2rem; */
+        text-align: center;
+    }
+   
+}

@@ -1,0 +1,105 @@
+.s-container{
+    position: relative;
+    /* margin-top: 10px; */
+}
+.s-container .swiper{
+    width: 70%;
+    height: 12rem;
+    position: unset;
+}
+.s-container .swiper-slide{
+    background: rgb(26, 26, 71);
+    display: flex;
+    border-radius: 10px;
+    padding: 1rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.s-container .swiper-slide:hover{
+    background: rgb(143, 22, 191);
+    color: #fff;
+    transition: all 1s ease;
+    border: 3px solid #fff;
+}
+.s-container .swiper-button-prev{
+    left: 12rem;
+}
+.s-container .swiper-button-next{
+    right: 12rem;
+}
+.s-container .swiper-button-prev, .s-container .swiper-button-next{
+    color: black;
+    font-size: 2px;
+}
+.left-s{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.left-s>span{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+.name>:nth-child(1){
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.name>:nth-child(2){
+    font-size: 0.9rem;
+}
+.left-s>:nth-child(3){
+    font-size: 0.6rem;
+    border: 1px solid var(--black);
+    padding: 3px 10px;
+    width: max-content;
+    border-radius: 10px;
+    /* font-size: 0.8rem; */
+    text-align: center;
+}
+.img-p{
+    transform: rotate(-20deg);
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    bottom: -20%;
+}
+
+/* ############ Media Queries */
+
+@media screen and (max-width: 1500px){
+    .s-container .swiper-button-prev,
+    .s-container .swiper-button-next{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .s-container .swiper{
+        width: 90%;
+        /* height: 60px; */
+    }
+    .s-container .swiper-button-prev,
+    .s-container .swiper-button-next{
+        display: none;
+    }
+}
+@media screen and (max-width: 640px){
+    .s-container{
+        align-items: center;
+        align-self: center;
+        width: 90%;
+        height: 60px;
+    }
+    .s-container .swiper-slide{
+        height: 10rem;
+        width: 70%;
+    }
+}

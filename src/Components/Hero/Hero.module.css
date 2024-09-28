@@ -1,0 +1,200 @@
+.container{
+    padding: 0rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 3rem;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.wrapper>img{
+    position: absolute;
+   /* margin-left: 10%; */
+   width: 28rem;
+   bottom: 0;
+} 
+.blueCircle{
+    width: 22rem;
+    height: 22rem;
+    border-radius: 50%;
+    z-index: -99;
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,252,198,1) 100%);
+    /* position: absolute; */
+    bottom: 0;
+}
+.cart2{
+    position: absolute;
+    bottom: 25%;
+    right: 7%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    color: black;
+}
+.cart2>svg{
+    width: 30px;
+    height: 30px;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    border: 6px solid var(--black);
+}
+.signup{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow1);
+}
+.signup>:first-child{
+    display: block;
+    width: 6rem;
+}
+.signup>:nth-child(2){
+    border-radius: 50%;
+    border: 1px solid skyblue;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+.signup .arrow>svg{
+    width: 15px;
+    height: 15px;
+}
+
+
+.h_sides{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.text1{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    width: min-content;
+    display: block;
+    font-weight: 600;
+}
+.text2{
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+}
+.text2>:first-child{
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+.text2>:last-child{
+    display: block;
+}
+
+/* ################### Right Side ************* */
+.traffic{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.traffic>:first-child{
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+.customers{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.customers >:first-child{
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+@media screen and (max-width: 1500px){
+    .cart2{
+        bottom: 10%;
+        margin-right: -29%;
+    }
+
+    .signup{
+        padding: 3px 5px;
+    }
+    .cart2>svg{
+        width: 18px;
+        height: 18px;
+        padding: 4px;
+        border: 2px solid var(--black);
+    }
+}
+
+/*  ###############################  */
+
+@media screen and (max-width: 850px){
+    .cart2{
+        bottom: 10%;
+        margin-right: -35%;
+    }
+
+    .signup{
+        padding: 3px 5px;
+    }
+    .cart2>svg{
+        width: 18px;
+        height: 18px;
+        padding: 4px;
+        border: 2px solid var(--black);
+    }
+    .text1, .text2>span:nth-of-type(2){
+        font-size: 0.9rem;
+        text-align: justify;
+    }
+    .text2 > span:nth-last-of-type(1),
+    .traffic>span:nth-child(1),
+    .customers>span:nth-child(1){
+        font-size: 1.5rem;
+        /* text-align: left; */
+    }
+    .blueCircle{
+        width: 70%;
+        height: 70%;
+    }
+    .wrapper>img{
+        width: 80%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .blueCircle{
+        width: 50%;
+        height: 50%;
+    }
+    .traffic>span:nth-child(1),
+    .customers>span:nth-child(1){
+        font-size: 1rem;
+        /* text-align: left; */
+    }
+    .traffic>span:nth-child(2),
+    .customers>span:nth-child(2){
+        font-size: 11px;
+    }
+    .text2>:first-child{
+        font-size: 0.8rem;
+    }
+    .text2>span:nth-of-type(2){
+        font-size: 0.7rem;
+    }
+    .cart2{
+        display: none;
+    }
+    .blueCircle{
+        width: 80%;
+        height: 90%;
+    }
+}
