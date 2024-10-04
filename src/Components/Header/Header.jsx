@@ -9,7 +9,7 @@ export const Header = () => {
   //   setMenu(!showMenu)
   // }
 
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -44,13 +44,24 @@ export const Header = () => {
           </div>
          </div>
 
+         <div className={css.listSearch2} style={{display: showMenu? "block" : "none"}}>
+            <ul className={css.menu2} style={{display: showMenu? "block" : "none"}}>
+                <li onClick={()=>setShowMenu(false)}>Collections</li>
+                <li onClick={()=>setShowMenu(false)}>Brands</li>
+                <li onClick={()=>setShowMenu(false)}>New</li>
+                <li onClick={()=>setShowMenu(false)}>Sales</li>
+                <li onClick={()=>setShowMenu(false)}>ENG</li>
+            </ul>
+            
+            <input type="text" className={css.search} placeholder='Search product'/>
+          </div>
+
          <div className={css.right}>
                 <div className={css.bars} onClick={toggleMenu}>
                   <MenuIcon />
                 </div>
-                {showMenu ? 
-                <div className={css.listSearch}>
-                    <ul className={css.menu} style={{display: showMenu? "flex" : "none"}}>
+                <div className={css.listSearch} >
+                    <ul className={css.menu} >
                         <li>Collections</li>
                         <li>Brands</li>
                         <li>New</li>
@@ -58,12 +69,14 @@ export const Header = () => {
                         <li>ENG</li>
                     </ul>
                     
-                    <input type="text" className={css.search} placeholder='Search product'style={{display: showMenu? "flex" : "none"}}/>
+                    <input type="text" className={css.search} placeholder='Search product'/>
                 </div>
-             : null}
                 
-                <ShoppingCartIcon className={css.cart} style={{visibility: showMenu? "visible" : "hidden"}}/>
+                <ShoppingCartIcon className={css.cart}/>
+                
          </div>
+        
+
     </div>
   )
 }
